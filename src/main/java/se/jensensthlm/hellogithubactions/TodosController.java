@@ -13,6 +13,6 @@ public class TodosController extends ControllerBase {
 
     @GetMapping("{id}")
     public ResponseEntity<String> getById(@PathVariable long id) {
-        return get("https://jsonplaceholder.typicode.com/todos/%d".formatted(id));
+        return get("https://jsonplaceholder.typicode.com/todos/" + id);
     }
 }

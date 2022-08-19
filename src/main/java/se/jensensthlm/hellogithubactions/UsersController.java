@@ -14,6 +14,6 @@ public class UsersController extends ControllerBase {
 
     @GetMapping("{id}")
     public ResponseEntity<String>  getById(@PathVariable long id) {
-        return get("https://jsonplaceholder.typicode.com/users/%d".formatted(id));
+        return get("https://jsonplaceholder.typicode.com/users/%d" + id);
     }
 }
