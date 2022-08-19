@@ -12,4 +12,8 @@ class HelloGithubActionsApplicationTests {
         assertTrue(true);
     }
 
+    @Test
+    void dummyTestNoPass() {
+        fail();
+    }
 }
