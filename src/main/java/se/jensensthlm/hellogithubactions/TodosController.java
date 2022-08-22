@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 public class TodosController extends ControllerBase {
     @GetMapping
     public ResponseEntity<String> getAll() {
-        return ResponseEntity.ok().body("[]");
+        return ResponseEntity.ok().body("{ \"msg\": \"Success. Rollback yo!\"");
         // return get("https://jsonplaceholder.typicode.com/todos");
     }
 
