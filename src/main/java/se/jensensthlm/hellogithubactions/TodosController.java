@@ -8,11 +8,13 @@ import org.springframework.web.bind.annotation.*;
 public class TodosController extends ControllerBase {
     @GetMapping
     public ResponseEntity<String> getAll() {
-        return get("https://jsonplaceholder.typicode.com/todos");
+        return ResponseEntity.ok().body("[]");
+        // return get("https://jsonplaceholder.typicode.com/todos");
     }
 
     @GetMapping("{id}")
     public ResponseEntity<String> getById(@PathVariable long id) {
-        return get("https://jsonplaceholder.typicode.com/todos/" + id);
+        var endpoint = String.format("https://jsonplaceholder.typicode.com/todos/%d", id);
+        return get(endpoint);
     }
 }
